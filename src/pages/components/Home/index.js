@@ -1,6 +1,12 @@
+// React and State Components
 import React from 'react';
 
-import Styled from 'styled-components';
+// UI Components
+import styled from 'styled-components';
+
+// Content Components
+
+
 
 const Home = () => {
   return (
