@@ -1,7 +1,11 @@
+// React and State Components
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// Components
+// UI Components
+import styled from 'styled-components'
+
+// Content Components
 import Home from './pages/components/Home';
 import About from './pages/components/About';
 import SinglePost from './pages/components/SinglePost';
