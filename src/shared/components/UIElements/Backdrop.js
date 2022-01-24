@@ -1,17 +1,33 @@
 // React and State Components
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-// UI Compoentns
+// UI Components
 import styled from 'styled-components';
 
-// Content Components
+const Backdrop = (props) => {
+  return ReactDOM.createPortal(
+    <Wrapper
+      isdisabled={props.isdisabled}
+      onClick={() => {
+        props.handleClick();
+      }}
+    ></Wrapper>,
+    document.getElementById('backdrop-hook')
+  );
+};
 
-const Backdrop = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  :hover {
+    cursor: ${(props) => (props.isdisabled ? 'wait' : 'no-drop')};
+  }
+`;
 
-export default Backdrop
+export default Backdrop;

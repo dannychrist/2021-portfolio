@@ -1,13 +1,9 @@
+// React and State Components
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HttpsRedirect from 'react-https-redirect';
 
+// Content Components
 import './index.css';
 import App from './App';
 
-ReactDOM.render(
-  <HttpsRedirect>
-    <App />
-  </HttpsRedirect>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
